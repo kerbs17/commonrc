@@ -1,0 +1,1 @@
+\set PROMPT1 '%[%`( sleep 0.1; kill -WINCH $PPID ) & (ps ho "%a" $PPID | grep -q _live) && echo -e "\\e[0;41m"`%]%/%R%#%[%033[m%] '

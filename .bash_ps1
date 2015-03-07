@@ -1,0 +1,3 @@
+#! /usr/bin/bash
+
+export PS1='[ \d \t \[\033[0;00m\]\u@\h \[\033[00m\]\w \[\033[$(ticket_no_color)m\]$(current_ticket_no) \[\033[36m\] $(parse_git_branch)\[\033[00m\]] \n$ '
