@@ -32,5 +32,13 @@ function parse_git_branch
     echo "${ref#refs/heads/} "
 }
 
-alias vid='vim `git diff origin/master --name-only`'
+function vid
+{
+    if [ $1 ]; then
+        FRAG="origin/$1"
+    else
+        FRAG='origin/integration'
+    fi
+    vim -X $(git diff $FRAG --name-only)
+}
 
