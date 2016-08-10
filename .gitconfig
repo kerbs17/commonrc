@@ -38,5 +38,5 @@
 [push]
     default = current
 [core]
-    autocrlf = true
+    autocrlf = input
 	editor = vim
