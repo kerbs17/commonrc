@@ -30,7 +30,6 @@ set tags=tags;/
 
 " include ctrl p plugin
 set runtimepath^=~/.vim/plugin/
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 if has("autocmd")
     autocmd BufEnter * lcd %:p:h
@@ -155,10 +154,7 @@ if has('eval')
 
   let CVSCommandDiffOpt='ubBpN'
 
-  source /usr/local/etc/vimrc_files/reasonably_stable_mappings.vim
 endif
-
-source /usr/local/etc/vimrc_files/go_to_component.vim
 
 function! InsertDumper()
     put='use Data::Dumper; die Dumper(   );'
