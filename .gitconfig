@@ -2,6 +2,13 @@
     name = "Kevin Kerber"
     email = kevin.kerber@gmail.com
 
+[core]
+    excludesfile = ~/.gitignore
+    autocrlf = true # develop on Windows, checkout lf -> crlf, check in crlf -> lf
+    # autocrlf = input # develop on Linux, check in crlf -> lf
+    pager = diff-so-fancy | less --tabs=4 -RFX
+    editor = vim
+
 [diff]
     color = auto
     noprefix = true
@@ -37,9 +44,6 @@
 
 [push]
     default = current
-[core]
-    autocrlf = input
-    editor = vim
 [log]
     decorate = true
 [rebase]
