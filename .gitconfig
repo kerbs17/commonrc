@@ -24,19 +24,17 @@
     enabled = false
 
 [alias]
-    cont = rebase --continue
-    abort = rebase --abort
+    cr = "!f() { \
+        git log --stat -p -w --patience --reverse -M -C --cc origin/master.. -- \":(exclude)$(git rev-parse --show-toplevel)/*package-lock.json\"; \
+    }; f"
     graph = log --graph --decorate --date=relative
     stat = status -s
     plog = log --stat -p -w --patience --reverse -M -C -C --cc origin/master..
     review = log --stat -p -w --patience --reverse -M -C -C --cc
-    rom = rebase -i origin/master
     nl = log --graph --oneline --decorate
     logg = log --graph --decorate
     shorty = log --pretty=oneline --abbrev-commit
     lr = log --word-diff-regex='[[:alnum:]]+|[^[:space:]]' --color-words -p -w --reverse -M origin/master..
-    grm = !git fetch origin --prune && git rebase origin/master
-    gfo = fetch origin --prune
     fo = fetch origin --prune
 
 [merge]
